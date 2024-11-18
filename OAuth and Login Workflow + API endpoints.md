@@ -14,7 +14,6 @@
 await fetch(BASE_URL/oauth/authorize/?response_type=code&
 code_challenge=${code_challenge}&
 code_challenge_method=S256&
-code_challenge=${code_challenge}&
 client_id=hardcoded-client-id&
 redirect_uri=hardcoded-redirect-on-authorization
 )
@@ -35,7 +34,7 @@ redirect_uri=hardcoded-redirect-on-authorization
             method: 'POST',
             body: JSON.stringify(
               {
-                client_id: [client_id],
+                client_id: [harcoded_client_id],
                 code: 'code',
                 code_verifier: code_verifier,
                 redirect_uri: hardcoded-redirect-uri,
